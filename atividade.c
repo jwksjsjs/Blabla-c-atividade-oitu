@@ -73,25 +73,7 @@ printf("Data publicação: %d\n", p_Bibl->livros[n].anoPubli);
 
 }
 
-void buscar(struct Biblioteca *livrus){
 
-if(livrus->numLivros == 0){  
-    printf("Não há livros na biblioteca\n");  
-    return;  
-}  
-  
-int resp = perguntar();  
-  
-if(resp == 1){  
-    printf("Diggite o título que do livro que deseja buscar: \n");  
-    buscar_livro_nome(livrus);  
-      
-}else{  
-    printf("Digite o código do livro que deseja buscar: \n");  
-    buscar_livro_codigo(livrus);  
-}
-
-}
 //   ^
 //   |
 //   |
@@ -137,6 +119,26 @@ printf("Publicação: %d\n", livrus->livros[i].anoPubli);
 }  
 printf("Livro não encontrado\n");  
 return -1;
+
+}
+
+void buscar(struct Biblioteca *livrus){
+
+if(livrus->numLivros == 0){  
+    printf("Não há livros na biblioteca\n");  
+    return;  
+}  
+  
+int resp = perguntar();  
+  
+if(resp == 1){  
+    printf("Diggite o título que do livro que deseja buscar: \n");  
+    buscar_livro_nome(livrus);  
+      
+}else{  
+    printf("Digite o código do livro que deseja buscar: \n");  
+    buscar_livro_codigo(livrus);  
+}
 
 }
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
